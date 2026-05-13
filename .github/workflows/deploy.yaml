@@ -137,7 +137,7 @@ jobs:
           PAGE_URL: ${{ steps.deployment.outputs.page_url }}
         run: |
           set -euo pipefail
-          echo "$GITHUB_TOKEN" | gh auth login --with-token
+
           today="$(date -u +%F)"
           status="$DEPLOY_STATUS"
           if [ -z "$PAGE_URL" ]; then
