@@ -144,5 +144,6 @@ jobs:
             PAGE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
           fi
           gh issue create \
+            --repo "${{ github.repository }}" \
             --title "$today - Deployment: $status" \
             --body "URL: $PAGE_URL"
